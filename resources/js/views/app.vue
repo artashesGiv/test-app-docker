@@ -1,18 +1,19 @@
 <template>
-    <div>
-        {{message}}
-    </div>
+  <div class="container">
+    <comments-component/>
+  </div>
 </template>
 <script>
-const default_layout = "default";
+import Button from '../shared/ui/Button.vue'
+import Comments from '../pages/comments/ui/Comments.vue'
 
+const default_layout = 'default'
 
 export default {
-    computed: {},
-    data() {
-        return {
-            message:'Hello World!!!!!'
-        }
-    }
-};
+  components: {
+    'comments-component': Comments,
+    'button-component': Button,
+  },
+  computed: {},
+}
 </script>
